@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<html>
+<head>
+    <title>WELLCOME 2: Sử dụng Input + Alert, viết JS dưới dạng Internal Javascript</title>
+    <script language="Javascript">
+        function DisplayMsg(msg) {
+            alert(msg);
+        }
+    </script>
+    <script src="~/Scripts/myScript/Userscript.js"></script>
+</head>
+<body>
+    <form name="Welcome">
+        <input type="text" name="txtName"
+               @*value=" Welcome to Javascript"*@
+               size="30" maxlength="30" />
+        <input type="number" name="txtAge" min="0" max="100" />
+        <input type="button" name=" btn_welcome" value="Welcome"
+               onclick="DisplayMsg(txtName.value); Homnay();" />
+    </form>
+</body>
+</html>
+

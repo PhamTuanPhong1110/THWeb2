@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<html>
+<head>
+    <title>TÍNH TIỀN</title>
+    <meta http-equiv="content-type" content=" text/html" charset="utf-8"/>
+    <script>
+        function CalculateTotal() {
+            var dg = parseFloat(document.getElementById("iPrice").value);
+            var sl = parseFloat(document.getElementById("iQuantity").value);
+            if (dg < 0) alert("Đơn giá phải >0");
+            else if (sl <= 0 || sl >= 15) alert("Số lượng phải trong khoảng[1, 15]");
+            else window.document.getElementById("lbTotal").value = dg * sl;
+        }
+        function selectProduct(obj) {
+            var errMsg = document.getElementById(err_msg);
+            var value = obj.value;
+            if (value == '') {
+                err_msg.interHTML = "Hãy chọn sản phẩm";
+            }
+        }
+    </script>
+</head>
+<body>
+    NHẬP SỐ LƯỢNG VÀ ĐƠN GIÁ
+    <form method="post">
+        Mặt hàng:
+        <select id="product" onchange="selectProduct(this);">
+            <option></option>
+            <option>iphone7</option>
+            <option>iphone8</option>
+            <option>iphone10</option>
+            <option>iphone11</option>
+        </select>
+        <p style="color:red" id="err_msg"></p>
+        Đơn giá: <input type="number" id="iPrice" name="Price" />
+        Số lượng: <input type="number" id="iQuantity" name="Quantity"
+                         min="0" max="15"
+                         @*onchange="CalculateTotal();*@
+                         onkeydown="CalculateTotal();"
+                         onmousedown="CalculateTotal();"/>
+        Thành tiền: <input type="text" id="lbTotal" name="Total" />
+        <br />
+    </form>
+</body>
+</html>
+

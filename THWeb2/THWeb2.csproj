@@ -122,6 +122,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -145,13 +147,15 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\images\banner.jpg" />
-    <Content Include="Content\images\batman.jpg" />
     <Content Include="Content\images\jordan.jpg" />
+    <Content Include="Content\images\logo.jpg" />
     <Content Include="Content\images\mau1.jpg" />
     <Content Include="Content\images\mau2.png" />
     <Content Include="Content\images\mau3.png" />
     <Content Include="Content\images\mau4.png" />
     <Content Include="Content\images\mau5.jpg" />
+    <Content Include="Content\images\mau6.png" />
+    <Content Include="Content\images\nenweb.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -172,6 +176,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\myScript\Userscript.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -190,6 +195,11 @@
     <Content Include="Views\Home\Trangchu.cshtml" />
     <Content Include="Views\Product\ProductDetail.cshtml" />
     <Content Include="Views\Product\ShoppingCart.cshtml" />
+    <Content Include="Views\User\Welcome.cshtml" />
+    <Content Include="Views\User\Welcome2.cshtml" />
+    <Content Include="Views\User\Welcome3.cshtml" />
+    <Content Include="Views\ShoppingCart\ShoppingCart.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
